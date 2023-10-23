@@ -1,0 +1,223 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body {
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+
+body {
+	background-color: #001c2e;
+}
+
+#container {
+	max-width: 1920px;
+	margin: 0 auto;
+	max-height: 100vh;
+}
+
+#container > div.active {
+	display: block;
+}
+
+nav {
+	width: 100%;
+	padding: 20px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+nav ul {
+	max-width: 1920px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+nav ul li {
+	display: inline;
+	padding: 0 20px;
+	border-right: 2px solid #fff;
+}
+
+nav ul li:last-child {
+	border-right: 0;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+	border-bottom: 3px solid #fff;
+}
+
+/* Home Container */
+#home-container.active {
+	margin-top: 45vh;
+	text-align: center;
+	transform: scale(0.94);
+	animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+#home-container.active h1,
+#home-container.active h2,
+#home-container.active h3,
+#home-container.active small {
+	opacity: 0;
+  	filter: blur(4px);
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+#home-container.active h2 {
+	margin-left: -580px;
+	font-size: 50px;
+	font-weight: 400;
+	letter-spacing: -5px;
+	animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+#home-container.active h1 {
+	margin-top: -25px;
+	font-size: 90px;
+	font-weight: 800;
+	letter-spacing: -10px;
+	animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+#home-container.active h3 {
+	margin-left: 440px;
+	margin-top: -25px;
+	font-size: 25px;
+	font-weight: 400;
+	letter-spacing: -2px;
+	font-style: italic;
+	animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+#home-container.active small {
+	display: block;
+	margin-top: 20px;
+	font-size: 12px;
+	font-family: 'Sometype Mono', monospace;
+	animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+/* About Me Container */
+#about-me-container.active {
+	padding: 20px;
+	transform: scale(0.94);
+	animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+#about-me-container.active .left-container {
+	width: 30%;
+	text-align: center;
+}
+
+#about-me-container.active .about-me {
+	padding: 20px 0;
+}
+
+#about-me-container.active .about-me img {
+	border-radius: 6px;
+}
+
+#about-me-container.active .hero-container {
+	text-align: center;
+}
+
+#about-me-container.active .hero-container h2 {
+	margin-left: -260px;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: -1px;
+}
+
+#about-me-container.active .hero-container h1 {
+	margin-top: -10px;
+	font-size: 40px;
+	font-weight: 800;
+	letter-spacing: -4px;
+}
+
+#about-me-container.active .hero-container h3 {
+	margin-left: 200px;
+	margin-top: -10px;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: -1px;
+	font-style: italic;
+}
+
+#about-me-container.active .hero-container small {
+	text-align: center;
+	display: block;
+	margin-top: 5px;
+	font-size: 10px;
+	font-family: 'Sometype Mono', monospace;
+}
+
+#about-me-container.active .socials {
+	padding: 20px 0;
+}
+
+#about-me-container.active .socials ul {
+	list-style: none;
+}
+
+#about-me-container.active .socials ul li {
+	display: inline;
+	padding: 0 5px;
+}
+
+#about-me-container.active .socials ul li a {
+	color: #fff;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+#about-me-container.active .download-cv a {
+	display: inline-block;
+	padding: 10px 25px;
+	color: #fff;
+	border: 1px solid #fff;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+#about-me-container.active .download-cv a:hover {
+	background-color: #fff;
+	color: #001c2e;
+}
+
+/* Portfolio Container */
+#portfolio-container.active {
+	padding: 20px;
+	transform: scale(0.94);
+	animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+#about-me-container.active > div,
+#portfolio-container.active {
+	opacity: 0;
+  	filter: blur(4px);
+  	animation: fade-in 0.2s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
