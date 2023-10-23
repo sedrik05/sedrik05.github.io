@@ -5,6 +5,7 @@
 html, body {
 	font-family: 'Montserrat', sans-serif;
 	color: #fff;
+	padding-bottom: 50px !important;
 }
 
 body {
@@ -27,6 +28,8 @@ nav {
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	z-index: 9;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 nav ul {
@@ -122,14 +125,24 @@ nav ul li a:hover {
 
 /* About Me Container */
 #about-me-container.active {
-	padding: 20px;
+	margin-top: 20vh;
 	transform: scale(0.94);
 	animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 #about-me-container.active .left-container {
+	display: inline-block;
 	width: 30%;
 	text-align: center;
+	vertical-align: middle;
+}
+
+#about-me-container.active .right-container {
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+	vertical-align: middle;
+	width: 65%;
 }
 
 #about-me-container.active .about-me {
@@ -208,11 +221,79 @@ nav ul li a:hover {
 	color: #001c2e;
 }
 
+#about-me-container.active .skills {
+	padding: 20px 0;
+}
+
+#about-me-container.active .skills .skills-divider {
+	vertical-align: top;
+	display: inline-block;
+	width: 35%;
+}
+
+#about-me-container.active .skills h4 {
+	padding: 5px 0;
+}
+
+#about-me-container.active .skills h4 i {
+	color: #ffc800;
+}
+
+#about-me-container.active .skills h4 small {
+	font-weight: normal;
+	font-size: 10px;
+}
+
+#about-me-container.active .content {
+	text-align: center;
+}
+
+#about-me-container.active .content > div {
+	padding: 10px;
+	text-align: left;
+}
+
+#about-me-container.active .content h2 {
+	padding: 10px 0;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #fff;
+}
+
+#about-me-container.active .content .working-exp p,
+#about-me-container.active .content .education p {
+	font-size: 12px;
+}
+
+#about-me-container.active .content .working-exp h3 small,
+#about-me-container.active .content .education h3 small {
+	font-weight: normal;
+	font-size: 14px;
+	font-style: italic;
+}
+
+#about-me-container.active .content .working-exp h5 small {
+	font-weight: normal;
+	font-size: 12px;
+	font-style: italic;
+}
+
+#about-me-container.active .content .working-exp ul {
+	margin-left: 25px;
+}
+
+#about-me-container.active .content .working-exp ul li {
+	margin-bottom: 20px;
+}
+
 /* Portfolio Container */
 #portfolio-container.active {
 	padding: 20px;
 	transform: scale(0.94);
 	animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.content {
+	padding: 20px;
 }
 
 #about-me-container.active > div,
