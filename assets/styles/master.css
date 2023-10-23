@@ -214,6 +214,7 @@ nav ul li a:hover {
 	border: 1px solid #fff;
 	text-decoration: none;
 	font-size: 12px;
+	border-radius: 4px;
 }
 
 #about-me-container.active .download-cv a:hover {
