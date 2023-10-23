@@ -70,8 +70,7 @@ nav ul li a:hover {
 
 #home-container.active h1,
 #home-container.active h2,
-#home-container.active h3,
-#home-container.active small {
+#home-container.active h3 {
 	opacity: 0;
   	filter: blur(4px);
 }
@@ -115,12 +114,28 @@ nav ul li a:hover {
 	animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 305px;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
 #home-container.active small {
+	margin: 0 auto;
+	max-width: 305px;
 	display: block;
 	margin-top: 20px;
 	font-size: 12px;
 	font-family: 'Sometype Mono', monospace;
-	animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+	/*animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);*/
+	border-right: 2px solid rgba(255,255,255,.75);
+	white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    animation: typewriter 4s steps(44) 1.8s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
 }
 
 /* About Me Container */
