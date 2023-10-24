@@ -321,10 +321,38 @@ nav ul li a:hover {
 
 /* Media Queries */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 484px) {
 	#home-container {
 		padding: 20px;
-		margin-top: 45vh !important;
+		margin-top: 40vh !important;
+	}
+
+	#home-container h2 {
+		text-align: left !important;
+  	margin-left: 0 !important;
+  	font-size: 40px !important;
+  }
+
+  #home-container h1 {
+  	text-align: left !important;
+  	margin-left: 0 !important;
+  	font-size: 55px !important;
+  	letter-spacing: -6px !important;
+  	margin-top: -2px !important;
+  	line-height: 42px;
+  }
+
+  #home-container h3 {
+  	font-size: 15px !important;
+  	margin-top: -3px !important;
+  	margin-left: 150px !important;
+  	letter-spacing: -1px !important;
+  }
+}
+@media only screen and (min-width: 485px) and (max-width: 601px) {
+	#home-container {
+		padding: 20px;
+		margin: 45vh auto !important;
 	}
 
 	#home-container h2 {
@@ -344,11 +372,6 @@ nav ul li a:hover {
   	margin-top: -15px !important;
   	margin-left: 290px !important;
   	letter-spacing: -1px !important;
-  }
-
-  #home-container small {
-  	/*font-size: 10px !important;*/
-  	/*max-width: 253px !important;*/
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -375,11 +398,6 @@ nav ul li a:hover {
 	  	margin-top: -18px !important;
 	  	margin-left: 350px !important;
 	  	letter-spacing: -1px !important;
-	  }
-
-	  #home-container small {
-	  	/*font-size: 10px !important;*/
-	  	/*max-width: 253px !important;*/
 	  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
