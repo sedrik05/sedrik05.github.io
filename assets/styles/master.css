@@ -448,7 +448,7 @@ nav ul li a:hover {
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1250px ){
 	#about-me-container {
 		margin-top: auto !important;
 		padding-bottom: 60px !important;
