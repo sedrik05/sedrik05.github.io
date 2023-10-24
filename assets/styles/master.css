@@ -323,6 +323,8 @@ nav ul li a:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 484px) {
 	#home-container {
+		display: inline-block;
+		vertical-align: top;
 		padding: 20px;
 		margin-top: 40vh !important;
 	}
@@ -347,6 +349,21 @@ nav ul li a:hover {
   	margin-top: -3px !important;
   	margin-left: 150px !important;
   	letter-spacing: -1px !important;
+  }
+
+  #about-me-container {
+  	margin-top: auto !important;
+  	padding-bottom: 60px !important;
+  }
+
+  #about-me-container .left-container {
+  	display: block !important;
+  	width: 100% !important;
+  }
+
+  #about-me-container .right-container {
+  	display: block !important;
+  	width: 100% !important;
   }
 }
 @media only screen and (min-width: 485px) and (max-width: 601px) {
@@ -373,36 +390,83 @@ nav ul li a:hover {
   	margin-left: 290px !important;
   	letter-spacing: -1px !important;
   }
+
+  #about-me-container {
+  	margin-top: auto !important;
+  	padding-bottom: 60px !important;
+  }
+
+  #about-me-container .left-container {
+  	display: block !important;
+  	width: 100% !important;
+  }
+
+  #about-me-container .right-container {
+  	display: block !important;
+  	width: 100% !important;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 601px) and (max-width: 767px) {
-		#home-container {
-			padding: 20px;
-			margin-top: 45vh !important;
-		}
+	#home-container {
+		padding: 20px;
+		margin-top: 45vh !important;
+	}
 
-		#home-container h2 {
-	  	margin-left: -430px !important;
-	  	font-size: 50px !important;
-	  }
+	#home-container h2 {
+  	margin-left: -430px !important;
+  	font-size: 50px !important;
+  }
 
-	  #home-container h1 {
-	  	margin-left: 0 !important;
-	  	font-size: 70px !important;
-	  	letter-spacing: -7px !important;
-	  	margin-top: -14px !important;
-	  }
+  #home-container h1 {
+  	margin-left: 0 !important;
+  	font-size: 70px !important;
+  	letter-spacing: -7px !important;
+  	margin-top: -14px !important;
+  }
 
-	  #home-container h3 {
-	  	font-size: 18px !important;
-	  	margin-top: -18px !important;
-	  	margin-left: 350px !important;
-	  	letter-spacing: -1px !important;
-	  }
+  #home-container h3 {
+  	font-size: 18px !important;
+  	margin-top: -18px !important;
+  	margin-left: 350px !important;
+  	letter-spacing: -1px !important;
+  }
+
+  #about-me-container {
+  	margin-top: auto !important;
+  	padding-bottom: 60px !important;
+  }
+
+  #about-me-container .left-container {
+  	display: block !important;
+  	width: 100% !important;
+  }
+
+  #about-me-container .right-container {
+  	display: block !important;
+  	width: 100% !important;
+  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+	#about-me-container {
+		margin-top: auto !important;
+		padding-bottom: 60px !important;
+	}
 
+	#about-me-container .left-container {
+		display: block !important;
+		width: 100% !important;
+	}
+
+	#about-me-container .left-container .about-me img {
+		width: 25% !important;
+	}
+
+	#about-me-container .right-container {
+		display: block !important;
+		width: 100% !important;
+	}
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
