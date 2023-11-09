@@ -230,6 +230,7 @@ nav ul li a:hover {
 	text-decoration: none;
 	font-size: 12px;
 	border-radius: 4px;
+	transition: all .6s ease;
 }
 
 #about-me-container.active .download-cv a:hover {
@@ -308,6 +309,68 @@ nav ul li a:hover {
 	animation: scale 1.5s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
+#portfolio-container.active h1 {
+	text-align: center;
+}
+
+#portfolio-container.active .portfolio-content {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#portfolio-container.active .portfolio-content ul {
+	list-style: none;
+	letter-spacing: 0px;
+  word-spacing: 0px;
+  font-size: 0px;
+}
+
+#portfolio-container.active .portfolio-content ul li {
+	position: relative;
+	display: inline-block;
+	margin: 10px;
+	overflow: hidden;
+  padding: 0px;
+  letter-spacing: 1em;
+  word-spacing: 2em;
+  font-size: 0px;
+	border-radius: 6px;
+}
+
+#portfolio-container.active .portfolio-content ul li a {
+	position: absolute;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	top: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	margin: 0px;
+  padding: 0px;
+  letter-spacing: 1em;
+  word-spacing: 2em;
+  transition: all .3s ease-out;
+}
+
+#portfolio-container.active .portfolio-content ul li:hover a {
+	top: 0;
+}
+
+#portfolio-container.active .portfolio-content ul li a p {
+	position: relative;
+	margin-top: 25%;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#portfolio-container.active .portfolio-content ul li img {
+	position: relative;
+	max-width: 100%;
+	width: 500px;
+}
+
 .content {
 	padding: 20px;
 }
@@ -366,7 +429,7 @@ nav ul li a:hover {
   	width: 100% !important;
   }
 }
-@media only screen and (min-width: 485px) and (max-width: 601px) {
+@media only screen and (min-width: 485px) and (max-width: 600px) {
 	#home-container {
 		padding: 20px;
 		margin: 45vh auto !important;
