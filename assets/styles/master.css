@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 }
+
 html, body {
 	font-family: 'Montserrat', sans-serif;
 	color: #fff;
@@ -10,6 +11,106 @@ html, body {
 
 body {
 	background-color: #001c2e;
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: #fbff00;
+  background: #be4040;
+}
+
+::selection {
+	color: #fbff00;
+  background: #be4040
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: 1;
+  visibility: visible;
+}
+
+.lines {
+	position: absolute;
+	opacity: 0.2;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+ }
+  
+.line {
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	overflow: hidden;
+}
+
+.line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+  
+.line:nth-child(1) {
+	margin-left: -25%;
+}
+
+.line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+
+.line:nth-child(3) {
+	margin-left: 25%;
+}
+    
+.line:nth-child(3)::after {
+  animation-delay: 2.5s;
+}
+    
+@keyframes drop {
+	0% {
+	  top: -50%;
+	}
+
+	100% {
+	  top: 110%;
+	}
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
 }
 
 #container {
@@ -73,7 +174,7 @@ nav ul li a:hover {
 #home-container.active h3,
 #home-container.active small {
 	opacity: 0;
-  	filter: blur(4px);
+  filter: blur(4px);
 }
 
 @keyframes scale {
@@ -87,6 +188,10 @@ nav ul li a:hover {
     opacity: 1;
     filter: blur(0);
   }
+}
+
+#home-container.active > div {
+	cursor: default;
 }
 
 #home-container.active h2 {
